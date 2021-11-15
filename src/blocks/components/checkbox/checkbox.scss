@@ -1,0 +1,43 @@
+.checkbox {
+	cursor: pointer;
+	input {
+		display: none;
+		&:checked + span:after {
+			background: #375D81 url(../img/svg/check.svg) center no-repeat;
+		}
+	}
+	span {
+		display: block;
+		max-width: 352px;
+		font-size: 15px;
+		line-height: 18px;
+		color: #375D81;
+		padding-left: 44px;
+		position: relative;
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			display: block;
+			width: 32px;
+			height: 32px;
+			border: 1px solid transparent;
+			background: transparent;
+		}
+		&:before {
+			border-color: #375D81;
+		}
+		a {
+			color: #00408F;
+			text-decoration: underline;
+			@media (min-width: 992px) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

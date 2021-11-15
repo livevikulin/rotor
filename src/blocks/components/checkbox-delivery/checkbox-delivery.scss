@@ -1,0 +1,76 @@
+.checkbox-delivery {
+	display: block;
+	max-width: 434px;
+	font-size: 20px;
+	line-height: 24px;
+	color: #000000;
+	border: 1px solid #EAF0F8;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 12px 42px 24px;
+	cursor: pointer;
+	transition: .2s ease;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 48px;
+		background: #EAF0F8;
+		z-index: -1;
+		opacity: 0;
+	}
+	&:hover {
+		border-color: #375D81;
+	}
+	input {
+		display: none;
+	}
+	span {
+		display: block;
+		font-size: 16px;
+		line-height: 24px;
+		color: #26425E;
+		padding-top: 28px;
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			top: -22px;
+			left: -32px;
+			background: #ffffff;
+			display: block;
+			width: 20px;
+			height: 20px;
+			border: 1px solid #EEEEEE;
+			border-radius: 50%;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			top: -15px;
+			left: -25px;
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #375D81;
+			transition: .5s ease;
+			transform: scale(0);
+		}
+	}
+}
+
+.active-checkbox {
+	&:before {
+		opacity: 1;
+	}
+	span {
+		&:after {
+			transform: scale(1);
+		}
+	}
+}

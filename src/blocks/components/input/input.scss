@@ -1,0 +1,139 @@
+.input-block {
+	display: block;
+	position: relative;
+	input {
+		width: 100%;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		color: #424242;
+		padding: 6px;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #90A4AF;
+		background: transparent;
+		transition: .3s ease;
+		&:focus {
+			border-color: #00408F;
+			& + span {
+				font-size: 12px;
+				top: -16px;
+			}
+		}
+	}
+	.input-focus {
+		border-color: #00408F;
+		& + span {
+			font-size: 12px;
+			top: -16px;
+		}
+	}
+	span {
+		position: absolute;
+		top: -12px;
+		left: 0;
+		display: inline-block;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+		color: #375D81;
+		pointer-events: none;
+		transition: .3s ease;
+	}
+	p {
+		display: none;
+		font-size: 14px !important;
+		line-height: 18px !important;
+		color: #FE4359 !important;
+		position: absolute !important;
+		margin-bottom: 0 !important;
+	}
+}
+
+.textarea-block {
+	display: block;
+	position: relative;
+	textarea {
+		width: 100%;
+		min-height: 57px;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 22px;
+		color: #424242;
+		padding: 6px;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #90A4AF;
+		background: transparent;
+		resize: vertical;
+		transition: border-color .3s ease;
+		&:focus {
+			border-color: #00408F;
+			& + span {
+				font-size: 12px;
+				top: -16px;
+			}
+		}
+		&::-webkit-scrollbar {
+			width: 4px;
+			border-radius: 8px;
+			background-color: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			width: 4px;
+			background: #00408F;
+			border-radius: 8px;
+		}
+	}
+	.input-focus {
+		border-color: #00408F;
+		& + span {
+			font-size: 12px;
+			top: -16px;
+		}
+	}
+	span {
+		position: absolute;
+		top: -12px;
+		left: 0;
+		display: inline-block;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+		color: #375D81;
+		pointer-events: none;
+		transition: .3s ease;
+	}
+	p {
+		display: none;
+		font-size: 14px !important;
+		line-height: 18px !important;
+		color: #FE4359 !important;
+		position: absolute !important;
+		margin-bottom: 0 !important;
+	}
+}
+
+.selector {
+	grid-template-areas: 
+		'big big small1'
+		'big big small2'
+		'big big button';
+}
+
+.error-input {
+	input {
+		color: #FE4359;
+		border-color: #FE4359;
+	}
+	textarea {
+		color: #FE4359;
+		border-color: #FE4359;
+	}
+	.input-focus {
+		border-color: #FE4359;
+	}
+	p {
+		display: block;
+	}
+}

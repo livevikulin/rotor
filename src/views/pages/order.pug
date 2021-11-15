@@ -1,0 +1,57 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+include ../../blocks/components/input/input
+include ../../blocks/components/checkbox-delivery/checkbox-delivery
+include ../../blocks/components/select/select
+
+
+block variables
+	- const title = "Оформление заказа";
+
+block content
+	+header-small('header-bg header-opt')
+
+	main
+		.order 
+			.container
+				h1 Оформление заказа
+				.order-wrapper 
+					.order-main
+						.order-box(data-count="1")
+							h3 Укажите контактные данные
+							.order-box__inputs
+								+input('ФИО', 'text', 'name', 'Введите ФИО')
+								+input('Телефон', 'text', 'phone', 'Введите номер телефона')
+								+input('Email', 'text', 'mail', 'Введите ваш email')
+								+textarea('Комментарий к заказу', 'Введите комментарий')
+						.order-box(data-count="2")
+							h3 Выбор доставки
+							.select
+								+select()
+							.order-box__inputs-delivery 
+								+input('Город', 'text', 'name')
+								+input('Улица', 'text', 'name')
+								+input('Дом', 'number', 'name')
+								+input('Кв.', 'number', 'name')
+							.order-checkboxes
+								+checkbox-delivery('СДЭК', 'после оформления заказа, наш менеджер рассчитает стоимость доставки и перезвонит вам')
+								+checkbox-delivery('Почта России', 'после оформления заказа, наш менеджер рассчитает стоимость доставки и перезвонит вам')
+						.order-box(data-count="3")
+							h3 Оплата
+							p Оплата будет произведена при получении, альтернативные способы оплаты можно уточнить у менеджера при потверждении заказа.
+					.basket-total 
+						h4 Ваш заказ
+						p
+							span Кол-во товаров
+							span 3 шт.
+						p.basket-total__all
+							span ИТОГО
+							span 20 980 руб.
+						a.button-orange(href="#") Оформить заказ
+
+
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

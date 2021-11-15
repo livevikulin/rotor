@@ -1,0 +1,58 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+include ../../blocks/components/news-item/news-item
+
+
+block variables
+	- const title = "Электромясорубка «Ротор Дива-М»";
+
+block content
+	+header-main('header-bg')
+
+	main.padding
+		.news-page
+			.container
+				include ../../blocks/components/breadcrumbs/breadcrumbs
+				h1 Новости
+				.news-page__tabs 
+					.news-page__nav 
+						a.news-page__button.tabs__nav-button.active-tab(href="#" data-tab="news-tab-1") 2021
+						a.news-page__button.tabs__nav-button(href="#" data-tab="news-tab-2") 2020
+						a.news-page__button.tabs__nav-button(href="#" data-tab="news-tab-3") 2019
+						a.news-page__button.tabs__nav-button(href="#" data-tab="news-tab-4") 2018
+					.news-page__items 
+						.news-page__item.tabs__item.active-tab#news-tab-1
+							.news-blocks
+								+news-item('На Втором этапе Кубка мира по гребле разыграны 20 мясорубок от АО АПЗ «Ротор»', '24 мая 2021', 'news1', 'news-big hover-this', '')
+								+news-item('Сотрудников завода «Ротор» наградили за спортивные результаты на фестивале ГТО', '14 мая 2021', 'news4', 'news-small hover-this', '')
+								+news-item('«Ротор» на агрофоруме «День Сибирского поля»', '14 мая 2021', 'news5', 'news-small hover-this', '')
+								+news-item('Команда АО АПЗ «Ротор» заняла третье место в VI спартакиаде среди команд Центрального района', '14 мая 2021', 'news6', 'news-small hover-this', '')
+								+news-item('АО АПЗ «Ротор» представит свой новый продукт на «Дне Сибирского поля»', '14 мая 2021', 'news2', 'news-small hover-this', '')
+								+news-item('На заводе «Ротор» запущено производство оборудования для переработки семян масличных сельскохозяйственных культур', '14 мая 2021', 'news7', 'news-small hover-this', '')
+								+news-item('С Днём России!', '14 мая 2021', 'news8', 'news-small hover-this', '')
+								+news-item('«Саня, Ваня и с ними Римас…» - сотрудники «Ротора» талантливы во всех своих проявлениях!', '14 мая 2021', 'news8', 'news-small hover-this', '')
+								+news-item('C Днём Великой Победы!', '14 мая 2021', 'news3', 'news-small hover-this', '')
+							include ../../blocks/components/pagination/pagination
+						.news-page__item.tabs__item#news-tab-2
+							.news-blocks
+								+news-item('На Втором этапе Кубка мира по гребле разыграны 20 мясорубок от АО АПЗ «Ротор»', '24 мая 2021', 'news1', 'news-big hover-this', '')
+								+news-item('Сотрудников завода «Ротор» наградили за спортивные результаты на фестивале ГТО', '14 мая 2021', 'news4', 'news-small hover-this', '')
+							include ../../blocks/components/pagination/pagination
+						.news-page__item.tabs__item#news-tab-3
+							.news-blocks
+								+news-item('Сотрудников завода «Ротор» наградили за спортивные результаты на фестивале ГТО', '14 мая 2021', 'news4', 'news-small hover-this', '')
+								+news-item('«Ротор» на агрофоруме «День Сибирского поля»', '14 мая 2021', 'news5', 'news-small hover-this', '')
+								+news-item('Команда АО АПЗ «Ротор» заняла третье место в VI спартакиаде среди команд Центрального района', '14 мая 2021', 'news6', 'news-small hover-this', '')
+							include ../../blocks/components/pagination/pagination
+						.news-page__item.tabs__item#news-tab-4
+							.news-blocks
+								+news-item('На Втором этапе Кубка мира по гребле разыграны 20 мясорубок от АО АПЗ «Ротор»', '24 мая 2021', 'news1', 'news-big hover-this', '')
+								+news-item('Сотрудников завода «Ротор» наградили за спортивные результаты на фестивале ГТО', '14 мая 2021', 'news4', 'news-small hover-this', '')
+								+news-item('«Ротор» на агрофоруме «День Сибирского поля»', '14 мая 2021', 'news5', 'news-small hover-this', '')
+							include ../../blocks/components/pagination/pagination
+				.cursor Посмотреть
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

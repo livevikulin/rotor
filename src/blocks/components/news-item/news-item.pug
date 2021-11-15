@@ -1,0 +1,7 @@
+mixin news-item(title, date, img, modify, animation)
+	div(class=`news-item ${modify}`)
+		a(href="#")
+		.news-item__image
+			img(class=`${animation}` src=`./img/news-item/${img}.jpg`, alt="")
+		.news-item__title=title
+		.news-item__date=date

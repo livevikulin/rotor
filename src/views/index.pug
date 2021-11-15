@@ -1,0 +1,42 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/logo/logo
+
+block variables
+	- const title = "РОТОР"
+
+block content
+	.index-wrapper
+		.index-container 
+			.index-container__logo
+				+logo('logo', 'mainLogo')
+			ul
+				li
+					a(href="main.html").index-container__button Главная
+				li
+					a(href="text-page.html").index-container__button Текстовая страница
+				li
+					a(href="catalog-card.html").index-container__button Каталог(карточки)
+				li
+					a(href="catalog-list.html").index-container__button Каталог(список)
+				li
+					a(href="product.html").index-container__button Карточка с товаром
+				li
+					a(href="news.html").index-container__button Новости
+				li
+					a(href="news-detail.html").index-container__button Новости деталка
+				li
+					a(href="vacancies.html").index-container__button Вакансии
+				li
+					a(href="contacts.html").index-container__button Контакты
+				li
+					a(href="basket.html").index-container__button Корзина
+				li
+					a(href="order.html").index-container__button Оформление заказа
+				li
+					a(href="order-final.html").index-container__button Готовый заказ
+				li
+					a(href="404.html").index-container__button 404
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

@@ -1,0 +1,107 @@
+.news-page {
+    .breadcrumbs {
+        margin-bottom: 20px;
+        a {
+            color: #26425e;
+        }
+    }
+    h1 {
+        color: #183152;
+    }
+    &__nav {
+        margin-bottom: 48px;
+        .active-tab {
+            color: #00408f;
+            opacity: 1;
+            border-color: #00408f;
+        }
+    }
+    &__button {
+        font-size: 18px;
+        line-height: 24px;
+        color: #222222;
+        opacity: 0.4;
+        border-bottom: 1px solid transparent;
+        margin-right: 28px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__items {
+        .active-tab {
+            display: block;
+        }
+    }
+    &__item {
+        display: none;
+    }
+
+    .news-big {
+        display: grid;
+        grid-template-columns: 655px 1fr;
+        gap: 16px 64px;
+        grid-template-areas:
+            "img title"
+            "img date";
+        grid-template-rows: auto 1fr;
+        .news-item__image {
+            grid-area: img;
+            @media (max-width: 992px) {
+                margin-bottom: 0;
+            }
+        }
+        .news-item__title {
+            max-width: 604px;
+            font-size: 32px;
+            line-height: 40px;
+            grid-area: title;
+            margin-bottom: 0;
+        }
+        .news-item__date {
+            grid-area: date;
+        }
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            gap: 16px 24px;
+            grid-template-areas:
+                "img img"
+                "title title"
+                "date date";
+        }
+    }
+
+    .pagination {
+        justify-content: flex-start;
+        margin-bottom: 0;
+        @media (max-width: 768px) {
+            margin: 8px 0 0;
+        }
+    }
+}
+
+.news-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -24px -107px;
+    .news-item {
+        margin: 24px 107px;
+        @media (max-width: 768px) {
+            margin: 0 0 36px;
+        }
+    }
+    .news-big {
+        margin: 24px 107px 36px;
+        .news-item__image {
+            margin-bottom: 0;
+        }
+    }
+    .news-small {
+        .news-item__title {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+}

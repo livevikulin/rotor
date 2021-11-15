@@ -1,0 +1,31 @@
+include ../../components/button/button
+include ../../components/input/input
+include ../../components/checkbox/checkbox
+
+
+.form-partners
+	svg(class="circles" width='1862' height='788' viewbox='0 0 1862 788' fill='none' xmlns='http://www.w3.org/2000/svg')
+		circle(cx='931' cy='379' r='132.5' stroke='white')
+		circle(cx='931' cy='379' r='265.5' stroke='white')
+		circle(cx='931' cy='379' r='398.5' stroke='white')
+		circle(cx='931' cy='379' r='531.5' stroke='white')
+		circle(cx='931' cy='379' r='664.5' stroke='white')
+		circle(cx='931' cy='379' r='797.5' stroke='white')
+		circle(cx='931' cy='379' r='930.5' stroke='white')
+	h2 нашим партнерам
+	p Индивидуальный подход и корректное отношение ко всем нашим клиентам и деловым партнерам, стабильное выполнение своих партнерских обязательств, а также предоставление всех своих ресурсов для обеспечения комфортного и качественного сотрудничества.
+	form.form(action="/sendPartner")
+		.form__inputs 
+			.form__input
+				+input('Имя', 'text', 'name', 'Неверное имя')
+			.form__input
+				+input('Телефон', 'text', 'phone', 'Неверный телефон')
+			.form__input
+				+input('Электропочта', 'text', 'mail', 'Неверный mail')
+			.form__input
+				+textarea('Сообщение', 'Введите сообщение')
+		.form__btns
+			button(type="submit" class="button-orange") Заказать
+				svg(width='15' height='14' viewbox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path(d='M1.5 13L13.5 1M13.5 1H1.5M13.5 1V13' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+			+checkbox('Я ознакомился и согласен с условиями обработки персональных данных')

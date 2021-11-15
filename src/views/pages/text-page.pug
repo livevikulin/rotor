@@ -1,0 +1,99 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+
+block variables
+	- const title = "Текстовая";
+
+block content
+	+header-main('header-bg')
+
+	main
+		.page
+			include ../../blocks/components/breadcrumbs/breadcrumbs
+			.page-hero
+				.container
+					h1 Профсоюзная организация организуем мероприятия
+					p.page-subtitle Краевая организация профсоюза работников оборонной промышленности
+					img(src="./img/text-page/text-page-img.jpg", alt="")
+			.page-main 
+				.container 
+					h2 Заголовок h2
+					h3 Заголовок h3
+					h4 Заголовок h4
+					p Профсоюз сегодня — это единственная организация, которая защищает социально — экономические права работников, добивается выполнения социальных гарантий, улучшает микроклимат в коллективе, поэтому <a href="#">Ссылка</a> нашей первичной профсоюзной организации: «Наша сила в единстве». Мы хотим, чтобы все работники нашего предприятия были объединены не только производственной деятельностью, но и досугом, чтобы коллектив участвовал в жизни каждого сотрудника, помогал решать проблемы, радовался и огорчался вместе с ним.
+					ul.list-default
+						li 1969 год – сданы первые приборы инерциального корабельного навигационного комплекса «Тобол»;
+						li 1970 год – выпущены приборы системы «Сайга», начаты проектные работы по изделиям центральной гироскопической стабилизации типа «База»;
+						li 1971 год – завод достиг предусмотренной проектом мощности по выпуску оборонной продукции;
+						li 1972 год – начало выпуска новых изделий – гироазимут-горизонтов типа «Минута»;
+					ol.list-num 
+						li Материальная помощь членам профсоюза.
+						li Культурные мероприятия для членов профсоюза (поездки на отдых в Горный Алтай, Новосибирский зоопарк, театры, кино, парки, посещение бассейна).
+						li Поощрение и подарки членам профсоюза.
+						li Проведение семинаров, совещаний, спортивных мероприятий.
+					.page-slider.swiper-container 
+						.swiper-wrapper 
+							.swiper-slide
+								img(src="./img/text-page/text-slide1.jpg", alt="")
+								p Подпись к фото 1
+							.swiper-slide
+								img(src="./img/text-page/text-slide2.jpg", alt="")
+								p Подпись к фото 1
+							.swiper-slide
+								img(src="./img/text-page/text-slide1.jpg", alt="")
+								p Подпись к фото 1
+							.swiper-slide
+								img(src="./img/text-page/text-slide2.jpg", alt="")
+								p Подпись к фото 1
+						.swiper-button-next
+							svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='white' stroke-width='2')
+						.swiper-button-prev
+							svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='white' stroke-width='2')
+						.swiper-pagination
+					.video-item
+						.video-item__wrap 
+							.video-item__preview.js-video
+								svg(width='124' height='124' viewbox='0 0 124 124' fill='none' xmlns='http://www.w3.org/2000/svg')
+									circle(opacity='0.9' cx='62' cy='62' r='62' fill='#F44336')
+									path(d='M76.5 61.134C77.1667 61.5189 77.1667 62.4811 76.5 62.866L55.5 74.9904C54.8333 75.3753 54 74.8942 54 74.1244L54 49.8756C54 49.1058 54.8333 48.6247 55.5 49.0096L76.5 61.134Z' fill='white')
+							video(controls="controls" poster="./img/text-page/text-page-img.jpg")
+								source(src="./img/text-page/video-1.mp4")
+						p Подпись к видео 1
+					.review-item
+						svg(width='28' height='28' viewbox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+							g(clip-path='url(#review)')
+								path(d='M12.25 12.25V24.5H0V12.075C0 3.675 7.875 2.625 7.875 2.625L8.925 5.075C8.925 5.075 5.425 5.6 4.725 8.4C4.025 10.5 5.425 12.25 5.425 12.25H12.25Z' fill='#00408F')
+								path(d='M28.5 12.25V24.5H16.25V12.075C16.25 3.675 24.125 2.625 24.125 2.625L25.175 5.075C25.175 5.075 21.675 5.6 20.975 8.4C20.275 10.5 21.675 12.25 21.675 12.25H28.5Z' fill='#00408F')
+							defs
+								clippath#review
+									rect(width='28' height='28' fill='white' transform='translate(28 28) rotate(-180)')
+						p Создание и производство высококачественной конкурентоспособной продукции в соответствии с современным техническим уровнем, удовлетворяющей требованиям и ожиданиям потребителей, обеспечивающей стабильный финансовый рост предприятия.
+						.review-item__person 
+							.review-item__avatar 
+								img(src="./img/review-item/avatar.jpg", alt="")
+							span Мария Иванова, менеджер
+					.table-wrap
+						table.table 
+							thead 
+								tr 
+									td Дата
+									td Описание
+									td Автор
+									td Должность
+							tbody 
+								tr
+									td Январь 2021
+									td На предприятии внедрена система менеджмента качества на соответствие требованиям ГОСТ Р ИСО 9001
+									td Иван Иванов
+									td Менеджер
+								tr
+									td Февраль 2021
+									td На предприятии внедрена система менеджмента качества на соответствие требованиям ГОСТ Р ИСО 9001
+									td Иван Иванов
+									td Менеджер
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

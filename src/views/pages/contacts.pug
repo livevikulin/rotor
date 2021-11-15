@@ -1,0 +1,99 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/input/input
+include ../../blocks/components/checkbox/checkbox
+include ../../blocks/components/button/button
+
+
+block variables
+	- const title = "Контакты";
+
+block content
+	+header-main('header-bg')
+
+	main
+		.contacts
+			.contacts-main 
+				.contacts__left
+					.contacts__top
+						.container
+							include ../../blocks/components/breadcrumbs/breadcrumbs
+							h1 Контакты
+							p Акционерное общество «Алтайский<br>приборостроительный завод «Ротор»
+							span Лесной тракт, 63,Алтайский край, г.Барнаул, 656906
+							a.contacts__phone(href="tel:+8 (3852) 57-94-20") 8 (3852) 57-94-20
+							a.contacts__mail(href="mailto:om@apzrotor.ru") om@apzrotor.ru
+					.contacts__form
+						.container
+							h3 Обратная связь для юр.лиц
+							form.form(action="#")
+								.form__inputs 
+									.form__input
+										+input('Компания', 'text')
+									.form__input
+										+input('ФИО сотрудника', 'text')
+									.form__input
+										+input('Телефон', 'text', 'phone')
+									.form__input
+										+input('Электропочта', 'text', 'mail')
+									.form__input
+										+textarea('Сообщение')
+								.form__btns
+									button(type="submit" class="button-orange") Отправить
+										svg(width='15' height='14' viewbox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(d='M1.5 13L13.5 1M13.5 1H1.5M13.5 1V13' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+									+checkbox('Я ознакомился и согласен с условиями обработки персональных данных')
+
+				.contacts__right
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A36f87f5028af55b7634bb7e124cf7c5e47e8a98abdcbb923974726934dadda20&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+			.contacts-lists 
+				.container 
+					.contacts-boxes
+						.contacts-box
+							.contacts-box__title Руководство
+							.contacts-box__position Генеральный директор
+							.contacts-box__name Максим Владимирович Коновалов
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") dir@apzrotor.ru
+						.contacts-box
+							.contacts-box__title Отдел кадров
+							.contacts-box__position Руководитель
+							.contacts-box__name Иван Васильевич Иванов
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") kadr@apzrotor.ru
+						.contacts-box
+							.contacts-box__title Отдел продаж
+							.contacts-box__position Руководитель
+							.contacts-box__name Мария Анатольевна Петрова
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") prod@apzrotor.ru
+						.contacts-box
+							.contacts-box__title Бухгалтерия
+							.contacts-box__position Руководитель
+							.contacts-box__name Татьяна Васильевна Шевченко
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") kadr@apzrotor.ru
+						.contacts-box
+							.contacts-box__title Юридический отдел
+							.contacts-box__position Руководитель
+							.contacts-box__name Юрий Николаевич Сыч
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") jury@apzrotor.ru
+						.contacts-box
+							.contacts-box__title Тех.отдел
+							.contacts-box__position Руководитель
+							.contacts-box__name Сергей Геннадьевич Молчанов
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") tech@apzrotor.ru
+						.contacts-box
+							.contacts-box__title Отдел обеспечения мат.ресурсами
+							.contacts-box__position Руководитель
+							.contacts-box__name Александр Александрович Ужин
+							a.contacts-box__phone(href="#") +7 (3852) 57‒94‒09
+							a.contacts-box__mail(href="#") hoz@apzrotor.ru
+	
+	
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

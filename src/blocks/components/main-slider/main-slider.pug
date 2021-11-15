@@ -1,0 +1,73 @@
+.main-slider
+	.main-slider__line--first
+	.main-slider__bg--first
+	.main-slider__bg--two
+	.slider-tabs
+		a(href="#" data-slider="slider-tab-1").slider-tabs__btn.js-tabs-btn Продукция
+		a(href="#" data-slider="slider-tab-2").slider-tabs__btn.active-tab.js-tabs-btn Завод
+	.sliders-wrapper 
+		.slider-first
+			.slider-first__bg--two
+		.slider-non-active
+		.slider-two
+			.slider-two__bg--two
+	.slider-tab
+		.slider-tab-item.slider-permutation#slider-tab-1
+			.slider-first-tab-1 
+				.swiper-wrapper 
+					.swiper-slide
+						.swiper-slide__title.caption-slide Изготавливаем приборы и узлы для ВМФ России
+						a(href="#").swiper-slide-img.hover-this
+							img.slide-img(src="./img/main-slider/slide-tab2-img.jpg", alt="")
+						a.swiper-slide__link-mobile(href="#") Посмотреть
+					.swiper-slide
+						.swiper-slide__title.caption-slide Изготавливаем приборы
+						a(href="#").swiper-slide-img.hover-this
+							img.slide-img(src="./img/main-slider/slide-tab2-img.jpg", alt="")
+						a.swiper-slide__link-mobile(href="#") Посмотреть
+				.slider-arrows
+					.slider-arrow.slider-arrows__prev
+						svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M40 17H2M2 17L17.7385 1M2 17L17.7385 33' stroke='black' stroke-width='2')
+					.slider-arrow.slider-arrows__next
+						svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='black' stroke-width='2')
+			.slider-two-tab-2
+				.swiper-wrapper 
+					.swiper-slide
+						img(src="./img/main-slider/slide-tab2-img2.jpg", alt="")
+					.swiper-slide
+						img(src="./img/main-slider/slide-tab2-img2.jpg", alt="")
+				.slider-pagination
+			.slider-non-active 
+				img(src="./img/main-slider/slide-2.jpg", alt="")
+		.slider-tab-item.active-tab#slider-tab-2
+			.slider-first-tab-1 
+				.swiper-wrapper 
+					.swiper-slide
+						.swiper-slide__title.caption-slide Изготавливаем приборы и узлы для ВМФ России
+						a(href="#").swiper-slide-img.hover-this
+							img.slide-img(src="./img/main-slider/slide-1.jpg", alt="")
+						a.swiper-slide__link-mobile(href="#") Посмотреть
+					.swiper-slide
+						.swiper-slide__title.caption-slide Изготавливаем приборы
+						a(href="#").swiper-slide-img.hover-this
+							img.slide-img(src="./img/main-slider/slide-1.jpg", alt="")
+						a.swiper-slide__link-mobile(href="#") Посмотреть
+				.slider-arrows
+					.slider-arrow.slider-arrows__prev
+						svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M40 17H2M2 17L17.7385 1M2 17L17.7385 33' stroke='black' stroke-width='2')
+					.slider-arrow.slider-arrows__next
+						svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='black' stroke-width='2')
+			.slider-non-active 
+				img(src="./img/main-slider/slide-non-active.jpg", alt="")
+			.slider-two-tab-2
+				.swiper-wrapper 
+					.swiper-slide 
+						img(src="./img/main-slider/slide-2.jpg", alt="")
+					.swiper-slide 
+						img(src="./img/main-slider/slide-2.jpg", alt="")
+				.slider-pagination
+	.cursor Посмотреть

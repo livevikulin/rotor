@@ -1,0 +1,89 @@
+.logo {
+	display: block;
+	position: relative;
+	bottom: -20px;
+	svg {
+		width: 100%;
+		pointer-events: none;
+	}
+}
+
+.opacity-1{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .1s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-2{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .15s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-3{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .2s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-4{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .25s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-5{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .3s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-6{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .35s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-7{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .4s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-8{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .45s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-9{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .5s anim;
+	animation-iteration-count: 1;
+}
+
+.opacity-10{
+	fill:#00408F;
+	fill-opacity:0;
+	animation: .5s forwards .55s anim;
+	animation-iteration-count: 1;
+}
+  
+@keyframes anim {
+	from {
+		fill-opacity:0;
+	}
+	
+	to {
+		fill-opacity:1;
+	}
+}

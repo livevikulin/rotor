@@ -1,0 +1,31 @@
+.downloads {
+	display: inline-block;
+	vertical-align: top;
+	&__title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 27px;
+		color: #183152;
+		margin-bottom: 24px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+		line-height: 27px;
+		text-decoration-line: underline;
+		color: #424242;
+		margin-bottom: 24px;
+		transition: .2s ease;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span {
+			display: block;
+			margin-left: 24px;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

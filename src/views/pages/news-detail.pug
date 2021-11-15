@@ -1,0 +1,50 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+
+
+block variables
+    - const title = "Текстовая";
+
+block content
+    +header-main('header-bg')
+
+    main.padding
+        .news-detail 
+            include ../../blocks/components/breadcrumbs/breadcrumbs
+            .page-main 
+                .container
+                    h1 «Ротор» на агрофоруме<br>«День Сибирского поля»
+                    p Завершившийся вчера, 24 июня, агрофорум «День Сибирского поля» собрал почти 300 компаний — участников мероприятия, представлявших свои технологии, продукцию, товары и услуги для агропромышленного комплекса. Это наибольшее число участников за всю историю агрофорума. И даже переменчивая погода — от ветра и дождя до жаркого солнца — не помешала гостям мероприятия посетить нашу площадку.
+                    .page-img 
+                        img(src="./img/news-detail/news-detail-img1.jpg", alt="")
+                        p Подпись к фото
+                    p Завод «Ротор» представил на своей экспозиции пресс шнековый для масличных культур, предназначенный для отжима масел холодным способом. На стенде «Ротор» можно было оценить высочайшие потребительские и вкусовые свойства полученных растительных масел. Масла холодного отжима — льняное, горчичное, масло кедрового ореха, масло грецкого ореха, кунжутное и тыквенное, с тёплым белым и ржаным хлебом высоко оценили все посетители стенда «Ротор»!
+                    .page-slider.swiper-container 
+                        .swiper-wrapper 
+                            .swiper-slide
+                                img(src="./img/text-page/text-slide1.jpg", alt="")
+                                p Подпись к фото 1
+                            .swiper-slide
+                                img(src="./img/text-page/text-slide2.jpg", alt="")
+                                p Подпись к фото 1
+                            .swiper-slide
+                                img(src="./img/text-page/text-slide1.jpg", alt="")
+                                p Подпись к фото 1
+                            .swiper-slide
+                                img(src="./img/text-page/text-slide2.jpg", alt="")
+                                p Подпись к фото 1
+                        .swiper-button-next
+                            svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='white' stroke-width='2')
+                        .swiper-button-prev
+                            svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='white' stroke-width='2')
+                        .swiper-pagination
+                    p Кроме маслопресса, завод представлял свою линейку техники для фермерских хозяйств — зернодробилки и сепаратор электрический, а также электромясорубки и электросушилки для фруктов, грибов и овощей. Среди сушилок также была представлена новинка — электросушилка со складывающимися решетами. Проявленный к продукции «Ротора» со стороны посетителей и участников агрофорума интерес в очередной раз подчеркнул важность и актуальность новых проектов и технологий, реализуемых на АО АПЗ «Ротор».
+                    p Присоединяйтесь к команде «Ротор»! Звоните: <a href="#">+7 (3852) 57-94-17</a>
+                    +button-b("все новости")
+    include ../../blocks/modules/footer/footer
+block scripts
+    script(src="js/main.js")
+    script(src="js/vendor.js")

@@ -1,0 +1,161 @@
+.button-orange {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #eeeeee;
+    background: #f44336;
+    border-radius: 4px;
+    padding: 18px 82px;
+    white-space: nowrap;
+    transition: 0.2s ease;
+    svg {
+        margin-left: 4px;
+    }
+    path {
+        transition: 0.2s ease;
+    }
+    @media (min-width: 1024px) {
+        &:hover {
+            background: #23272c;
+        }
+    }
+}
+
+.button-o {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #ffffff;
+    padding: 12px 40px;
+    background: #f44336;
+    border-radius: 32px;
+    transition: 0.2s ease;
+    @media (min-width: 1024px) {
+        &:hover {
+            background: #23272c;
+        }
+    }
+}
+
+.in-basket {
+    background: #00408f !important;
+    .svg-1 {
+        display: none !important;
+    }
+    .svg-2 {
+        display: block !important;
+    }
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #f44336;
+    transition: 0.2s ease;
+    z-index: 1;
+    @media (min-width: 1024px) {
+        &:hover {
+            background: #23272c;
+        }
+    }
+    .svg-2 {
+        display: none;
+    }
+}
+
+.card-list-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 12px 28px;
+    background: #f44336;
+    transition: 0.2s ease;
+    z-index: 1;
+    svg {
+        margin-right: 8px;
+    }
+    .svg-2 {
+        display: none;
+    }
+    span {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+        margin-left: 8px;
+    }
+    @media (min-width: 1024px) {
+        &:hover {
+            background: #23272c;
+        }
+    }
+}
+
+.button-b {
+    display: inline-block;
+    padding: 12px 32px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #00408f;
+    border: 1px solid #abc8e2;
+    box-sizing: border-box;
+    border-radius: 26px;
+    transition: 0.2s ease;
+    @media (min-width: 1024px) {
+        &:hover {
+            background: #00408f;
+            color: #ffffff;
+        }
+    }
+}
+
+.button-c {
+    display: inline-block;
+    margin-top: 40px;
+    position: relative;
+    z-index: 0;
+    span {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 28px;
+        color: #ffffff;
+        margin-right: 16px;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    }
+    svg {
+        vertical-align: middle;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -26px;
+        transform: translateY(-50%) scale(0);
+        display: block;
+        width: 96px;
+        height: 96px;
+        background: #f44336;
+        border-radius: 50%;
+        transition: 0.2s ease;
+        z-index: -1;
+    }
+    @media (min-width: 1024px) {
+        &:hover {
+            &:before {
+                transform: translateY(-50%) scale(1);
+            }
+        }
+    }
+}

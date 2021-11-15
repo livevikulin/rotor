@@ -1,0 +1,13 @@
+mixin input(title, type, name, error)
+	label.input-block(for="#")
+		input(type=`${type}` name=`${name}` maxlength="100")
+		span=title
+		if (error)
+			p=error
+
+mixin textarea(name, error)
+	label.textarea-block
+		textarea(name="" maxlength="500")
+		span=name
+		if (error)
+			p=error

@@ -1,0 +1,28 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+include ../../blocks/components/input/input
+
+
+block variables
+	- const title = "Оформление заказа";
+
+block content
+	+header-main('header-bg')
+
+	main
+		.not-found
+			svg(width='806' height='282' viewbox='0 0 806 282' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(class="animate-404" fill-rule='evenodd' clip-rule='evenodd' d='M403.172 73.2479C440.8 73.2479 471.39 103.7 471.39 141.27C471.39 174.065 448.109 201.454 417.249 207.941V282C488.896 274.973 544.841 214.698 544.841 141.36C544.841 63.3373 481.496 0 403.263 0C325.119 0 261.684 63.3373 261.684 141.36C261.684 214.788 317.629 275.063 389.276 282V207.941C358.325 201.544 335.135 174.065 335.135 141.27C335.045 103.7 365.544 73.2479 403.172 73.2479Z' fill='#ABC8E2')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M218.135 4.84158H145.511V280.812H218.135V4.84158ZM0.262196 4.84161H72.8861V106.515H118.881V179.139H72.8861H0.262196H0.261719V106.515H0.262196V4.84161Z' fill='#ABC8E2')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M806.267 4.84161H733.643V280.812H806.267V4.84161ZM588.395 4.84163H661.018V106.515H707.014V179.139L661.018 179.139H588.395V106.515V4.84163Z' fill='#ABC8E2')
+			.container 
+				h1 Страница не найдена
+				p Такой страницы больше не существует,<br>либо вы набрали неверный адрес.
+				a.button-b(href="#") Вернуться на главную
+
+
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

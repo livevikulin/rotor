@@ -1,0 +1,36 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+
+block variables
+	- const title = "Главная";
+
+block content
+
+	+header-main('')
+
+	main 
+		include ../../blocks/components/main-slider/main-slider
+		section.section.section-about 
+			.container 
+				include ../../blocks/modules/about-block/about-block
+		section.section.section-productions 
+			.container
+				include ../../blocks/modules/productions/productions
+		section.section.section-certificates
+			.container 
+				include ../../blocks/modules/certificates/certificates
+		section.section.section-form-partners 
+			.container
+				include ../../blocks/modules/form-partners/form-partners
+		section.section.section-news 
+			.container 
+				include ../../blocks/modules/news/news
+
+
+
+	include ../../blocks/modules/footer/footer
+	include ../../blocks/modules/modals/modals
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

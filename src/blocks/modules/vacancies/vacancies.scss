@@ -1,0 +1,179 @@
+.vacancies {
+	.breadcrumbs {
+		.container {
+			@media (max-width: 1280px) {
+				padding: 0 16px;
+			}
+		}
+		li {
+			&:nth-last-child(2) {
+				@media (max-width: 1280px) {
+					background: url(../img/svg/button-next-white.svg) no-repeat left top 9px;
+				}
+			}
+		}
+	}
+    .page-hero {
+        padding-bottom: 78px;
+    }
+    &__header {
+        display: flex;
+        p {
+            color: #FFFFFF;
+        }
+		@media (max-width: 1280px) {
+			flex-direction: column;
+		}
+    }
+    &__subtitle {
+        max-width: 816px;
+        margin-right: 270px;
+		@media (max-width: 1400px) {
+			margin-right: 100px;
+		}
+		@media (max-width: 1280px) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 24px;
+		}
+    }
+    &__contacts {
+        span {
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            color: #FFFFFF;
+            opacity: 0.6;
+            margin-bottom: 12px;
+        }
+        a {
+            display: block;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+			transition: .3s ease;
+            &:last-child {
+                margin-bottom: 0;
+            }
+			@media (min-width: 1280px) {
+				&:hover {
+					color: #F44336;
+				}
+			}
+        }
+    }
+    &__items {
+        width: 100%;
+        max-width: 1240px;
+    }
+    &__item {
+        padding: 28px 24px;
+        border-bottom: 1px solid #ABC8E2;
+        &:first-child {
+            border-top: 1px solid #ABC8E2;
+        }
+		@media (max-width: 768px) {
+			padding: 20px 12px;
+		}
+    }
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		transition: .2s linear;
+		p {
+			display: block;
+			font-size: 24px;
+			line-height: 36px;
+			color: #183152;
+			@media (max-width: 768px) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		span {
+			display: block;
+			font-size: 16px;
+			line-height: 24px;
+			color: #375D81;
+			@media (max-width: 768px) {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+	&__content {
+		max-height: 0;
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: max-height .6s linear;
+		.button-c {
+			span {
+				font-weight: 500;
+				color: #00408F;
+				border-color: rgba(0, 64, 143, 0.4);
+			}
+			path {
+				stroke: #00408F;
+			}
+			&:before {
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
+	&__salary {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 32px;
+		color: #424242;
+		margin-bottom: 28px;
+	}
+	&__box {
+		margin-top: 24px;
+		p {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 28px;
+			color: #222222;
+			margin-bottom: 8px;
+		}
+		ul {
+			margin: 0;
+			li {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+}
+
+.vacancies-open {
+	padding-bottom: 56px;
+	.vacancies__button {
+		margin-bottom: 4px;
+	}
+}
+
+.vacancies-main {
+	padding: 60px 0 120px;
+	h3 {
+		color: #183152;
+		margin-bottom: 56px;
+		@media (max-width: 768px) {
+			margin-bottom: 40px;
+		}
+	}
+	.button-c {
+		span {
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 40px 0 80px;
+	}
+}

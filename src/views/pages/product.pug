@@ -1,0 +1,121 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+
+
+block variables
+	- const title = "Электромясорубка «Ротор Дива-М»";
+
+block content
+	+header-main('header-bg')
+
+	main.padding
+		.product 
+			include ../../blocks/components/breadcrumbs/breadcrumbs
+			.product-container
+				.product-main 
+					.container 
+						.product__sliders
+							.product__slider-small
+								.slider-small.js-slider-small.swiper-container 
+									.swiper-wrapper 
+										.swiper-slide
+											img(src="./img/product/product-slide.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide2.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide2.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide2.jpg", alt="")
+								.swiper-button-next
+									svg(width='82' height='82' viewbox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg')
+										circle(r='41' transform='matrix(-4.37114e-08 1 1 4.37114e-08 41 41)' fill='white')
+										path(d='M41 28L41 54M41 54L30 43.2315M41 54L52 43.2315' stroke='#00408F' stroke-width='2')
+								.swiper-button-prev
+									svg(width='82' height='82' viewbox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg')
+										circle(cx='41' cy='41' r='41' transform='rotate(-90 41 41)' fill='white')
+										path(d='M41 54L41 28M41 28L30 38.7685M41 28L52 38.7685' stroke='#00408F' stroke-width='2')
+
+							.product__slider-main
+								.action-box
+									span.action-box__item.action-green Новинка
+									span.action-box__item.action-orange Акция
+								.slider-main.js-slider-main.swiper-container 
+									.swiper-wrapper 
+										.swiper-slide
+											img(src="./img/product/product-slide.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide2.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide2.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide.jpg", alt="")
+										.swiper-slide
+											img(src="./img/product/product-slide2.jpg", alt="")
+						.product__info
+							h1 Электромясорубка «Ротор Дива-М»
+							.product__articles
+								span Артикул 01500045
+							p.product__price 3590
+								span руб.
+							.product__options 
+								.product__counter(data-entity="quantity-block")
+									.product__counter-wrap 
+										button.product__counter-minu
+											svg(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+												g(opacity='0.8')
+													path(d='M14 8H8H2' stroke='#222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+										input(type="number" name="" value="1")
+										button.product__counter-plus
+											svg(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+												g(opacity='0.8')
+													path(d='M8 2V8M8 8H14M8 8H2M8 8V14' stroke='#222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+								+cardListBtn('Добавить в корзину')
+								button.card-list-btn(data-micromodal-trigger="modal-product") Открыть модалку
+							p Электрическая мясорубка «Ротор-Дива-М» предназначена для изготовления фарша из мяса, рыбы, грибов, нарезки овощей и фруктов, профилирования песочного и пельменного теста. Также мясорубку можно использовать как соковыжималку. Тип мясорубки — шнековый, возможна комплектация разнообразными насадками (для получения сока, для резки и шинковки овощей, терка, для приготовления колбас).
+							.product__advantages
+								.product__advantage
+									svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M11.2302 9.5635H4.5C3.39543 9.5635 2.5 10.4589 2.5 11.5635V35.5C2.5 36.6046 3.39543 37.5 4.5 37.5H35.4206C36.5252 37.5 37.4206 36.6046 37.4206 35.5V28.7699M11.2302 9.5635H19.9603H31.3095M11.2302 9.5635L24.8556 2.55615C25.7872 2.07705 26.9306 2.39796 27.4768 3.29182L31.3095 9.5635M31.3095 9.5635H35.4206C36.5252 9.5635 37.4206 10.4589 37.4206 11.5635V18.2937M37.4206 18.2937V23.5318V28.7699M37.4206 18.2937H29.5635C26.6706 18.2937 24.3254 20.6388 24.3254 23.5318V23.5318C24.3254 26.4247 26.6706 28.7699 29.5635 28.7699H37.4206' stroke='#375D81' stroke-width='1.8')
+										circle(cx='29.375' cy='23.75' r='0.975' stroke='#375D81' stroke-width='1.8')
+									p Оплата при<br>получении
+								.product__advantage
+									svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M20.4972 1.66669L5.95268 5.65148C5.55289 5.76101 5.26324 6.09934 5.23117 6.51262C5.01291 9.32464 4.3747 20.19 6.9555 26.25C9.81266 32.9589 20.4972 37.0834 20.4972 37.0834M20.4972 1.66669L35.0417 5.65148C35.4414 5.76101 35.7311 6.09934 35.7632 6.51262C35.9814 9.32464 36.6196 20.19 34.0388 26.25C31.1817 32.9589 20.4972 37.0834 20.4972 37.0834M20.4972 1.66669V37.0834' stroke='#375D81' stroke-width='1.8')
+									p Гарантия<br>2 года
+								.product__advantage
+									svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M10.6507 17.4886L17.7753 2.79414C18.1096 2.10458 18.8086 1.66669 19.5749 1.66669H20.637C21.7416 1.66669 22.637 2.56212 22.637 3.66669V12.1324C22.637 13.237 23.5324 14.1324 24.637 14.1324H35.1222C36.3637 14.1324 37.3053 15.2519 37.0926 16.4751L36.5411 19.6461M10.6507 17.4886H4.5C3.39543 17.4886 2.5 18.384 2.5 19.4886V34.1872C2.5 35.2918 3.39543 36.1872 4.5 36.1872H10.6507M10.6507 17.4886V36.1872M10.6507 36.1872H31.9822C32.9545 36.1872 33.786 35.4879 33.9526 34.5299L34.6233 30.6735M35.5822 25.1598H30M35.5822 25.1598L36.5411 19.6461M35.5822 25.1598L34.6233 30.6735M36.5411 19.6461H30.9375M34.6233 30.6735H28.75' stroke='#375D81' stroke-width='1.8' stroke-linecap='round')
+									p Цены<br>от производителя
+				.product-tabs 
+					.product-tabs__nav
+						.container
+							.product-tabs__nav-block
+								a.product-tabs__button.tabs__nav-button.active-tab(href="#" data-tab="product-tab-1" title="Описание") Описание
+								a.product-tabs__button.tabs__nav-button(href="#" data-tab="product-tab-2" title="Характеристики") Характеристики
+								a.product-tabs__button.tabs__nav-button(href="#" data-tab="product-tab-3" title="Как купить") Как купить
+								a.product-tabs__button.tabs__nav-button(href="#" data-tab="product-tab-4" title="Гарантии и сервис") Гарантии и сервис
+					.product-tabs__items
+						.container
+							.product-tabs__items-block
+								.product-tabs__item.tabs__item.active-tab#product-tab-1
+									p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, sequi, alias in id architecto culpa ad, harum accusantium ex quisquam repellendus expedita cupiditate facilis perspiciatis. Obcaecati nihil dolor excepturi hic officia dolore amet corporis id commodi. Natus aliquam similique facilis accusamus, animi laudantium? Harum similique deserunt aliquid officia, delectus sint!
+								.product-tabs__item.tabs__item#product-tab-2
+									include ../../blocks/components/properties/properties
+									include ../../blocks/components/downloads/downloads
+								.product-tabs__item.tabs__item#product-tab-3
+									p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id hic distinctio deleniti voluptate recusandae? Porro fugiat incidunt rerum beatae est ullam nihil dolores reiciendis minima deleniti! Labore eos natus praesentium optio qui aliquam, recusandae minima ipsum blanditiis eaque. Ipsum earum necessitatibus sint eum ex odio veritatis? Est animi enim ipsa necessitatibus omnis delectus magnam? Ipsam unde, nobis reprehenderit atque ut deserunt? Magnam eius eaque ullam ipsum, repellat fugiat ipsam dignissimos.
+								.product-tabs__item.tabs__item#product-tab-4
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illum quisquam magnam possimus quaerat aliquam ut, dolorum atque nesciunt nobis accusamus aperiam dolor, vitae vel officia voluptatibus quas quis nam inventore quam expedita dolorem. Accusamus minima amet incidunt expedita et facilis! Deleniti suscipit consequatur et nesciunt libero voluptates doloribus? Omnis ea voluptatibus autem corrupti repellat repudiandae atque, libero ipsum accusamus nulla nisi rerum aut cupiditate sed quidem officia magnam voluptates neque recusandae vero modi ex sapiente saepe? Consequuntur, facere? Exercitationem.
+		
+	include ../../blocks/modules/footer/footer
+	include ../../blocks/modules/modals/modals
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

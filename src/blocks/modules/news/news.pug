@@ -1,0 +1,10 @@
+include ../../components/news-item/news-item
+include ../../components/button/button
+
+.news 
+	h2 Новости и события
+	.news-items
+		+news-item('На Втором этапе Кубка мира по гребле разыграны 20 мясорубок от АО АПЗ «Ротор»', '24 мая 2021', 'news1', 'news-big', 'animation-img')
+		+news-item('На заводе «Ротор» запущено производство оборудования для переработки семян масличных сельскохозяйственных культур', '14 мая 2021', 'news2', 'news-small news-small1', 'animation-img')
+		+news-item('C Днём Великой Победы!', '9 мая 2021', 'news3', 'news-small news-small2', 'animation-img')
+		+button-b('Все новости')

@@ -1,0 +1,24 @@
+include ../button/button
+
+mixin card-item(name)
+	div(class=`card-item`)
+		a.card-item__link(href="#") 
+		.card-item__image
+			.action-box
+				span.action-box__item.action-green Новинка
+				span.action-box__item.action-orange Акция
+			img(src="./img/card-item/card-item.jpg", alt="")
+		.card-item__main
+			.card-item__name=name
+			.card-item__info 
+				p
+					span Макс. мощность
+					span 1500 Вт
+				p
+					span Производительность
+					span 30 кг/ч
+		.card-item__footer 
+			.card-item__cost 2450
+				span руб.
+			+cardListBtn('В корзину')
+				

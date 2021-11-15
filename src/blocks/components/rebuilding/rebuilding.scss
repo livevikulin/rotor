@@ -1,0 +1,21 @@
+.rebuilding {
+	display: flex;
+	align-items: center;
+	&__item {
+		opacity: .4;
+		margin-right: 16px;
+		transition: .3s ease;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.active {
+		opacity: 1;
+	}
+	@media (max-width: 992px) {
+		display: none;
+	}
+}

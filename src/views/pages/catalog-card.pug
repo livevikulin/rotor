@@ -1,0 +1,102 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+include ../../blocks/components/card-item/card-item
+
+
+block variables
+	- const title = "Каталог";
+
+block content
+	+header-main('header-bg')
+	
+	main 
+		.catalog 
+			.catalog-h
+				.container
+					.catalog-head
+						.catalog-slider.swiper-container 
+							.swiper-wrapper 
+								.swiper-slide.right-info
+									img(src="./img/catalog/slide1.jpg", alt="")
+									.catalog-slider__info
+										p Только в июне скидка<br>на все мясорубки
+										.sale-box -15%
+								.swiper-slide
+									img(src="./img/catalog/slide2.jpg", alt="")
+									.catalog-slider__info
+										p Новинка! Ультразвуковой ингалятор «Ротор-2»
+										+button-o('Смотреть')
+								.swiper-slide.right-info
+									img(src="./img/catalog/slide1.jpg", alt="")
+									.catalog-slider__info
+										p Только в июне скидка<br>на все мясорубки
+										.sale-box -15%
+								.swiper-slide
+									img(src="./img/catalog/slide2.jpg", alt="")
+									.catalog-slider__info
+										p Новинка! Ультразвуковой ингалятор «Ротор-2»
+										+button-o('Смотреть')
+						.swiper-button-next
+							svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='white' stroke-width='2')
+						.swiper-button-prev
+							svg(width='40' height='34' viewbox='0 0 40 34' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0 17H38M38 17L22.2615 1M38 17L22.2615 33' stroke='white' stroke-width='2')
+			.catalog-m
+				.container 
+					.catalog-main
+						.catalog-nav
+							ul 
+								li
+									a(href="#") Электросушилки
+								li.active
+									a(href="#") Мясорубки
+								li
+									a(href="#") Медицинская техника
+								li
+									a(href="#") Автомобильная продукция
+								li
+									a(href="#") Техника для фермерского хозяйства
+								li
+									a(href="#") Хозяйственно-бытовые изделия из пластмассы
+								li
+									a(href="#") Спецпродукция
+						.catalog-wrap
+							include ../../blocks/components/breadcrumbs/breadcrumbs
+							h1 Мясорубки
+							span.count-positions 24 позиции в разделе
+							.catalog-sorting 
+								include ../../blocks/components/sorting/sorting
+								include ../../blocks/components/rebuilding/rebuilding
+							.card-items
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+								+card-item('Электромясорубка «Ротор Дива-М»')
+							include ../../blocks/components/pagination/pagination
+							.catalog-prompt
+								h3 Как купить
+								.catalog-prompt__items 
+									.catalog-prompt__item
+										span 1
+										p Добавьте товар в корзину
+									.catalog-prompt__item
+										span 2
+										p Оплатите товар на сайте
+									.catalog-prompt__item
+										span 3
+										p Выберите удобный способ доставки
+
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

@@ -1,0 +1,24 @@
+include ../../components/input/input
+include ../../components/checkbox/checkbox
+
+.modal#modal-product 
+    .modal__wrapper 
+        button.modal__close(data-micromodal-close)
+            svg(width='26' height='26' viewbox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M1.33398 1.33334L13.0006 13M13.0006 13L24.6673 24.6667M13.0006 13L24.6673 1.33334M13.0006 13L1.33398 24.6667' stroke='#375D81' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round')
+        h1 Заказать спецпродукцию
+        form.form(action="/sendPartner")
+            .form__inputs 
+                .form__input
+                    +input('Имя', 'text', 'name', 'Неверное имя')
+                .form__input
+                    +input('Телефон', 'text', 'phone', 'Неверный телефон')
+                .form__input
+                    +input('Электропочта', 'text', 'mail', 'Неверный mail')
+                .form__input
+                    +input('Компания', 'text', 'name', 'Введите название компании')
+            .form__btns
+                button(type="submit" class="button-orange") Заказать
+                    svg(width='15' height='14' viewbox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M1.5 13L13.5 1M13.5 1H1.5M13.5 1V13' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                +checkbox('Я ознакомился и согласен с условиями обработки персональных данных')

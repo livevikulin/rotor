@@ -1,0 +1,41 @@
+extends ../layouts/default
+include ../../blocks/modules/header/header
+include ../../blocks/components/button/button
+
+
+block variables
+	- const title = "Оформление завершено";
+
+block content
+	+header-small('header-bg header-opt')
+
+	main
+		.order
+			.container 
+				h1 Спасибо за заказ!
+				.order-final
+					p.order-final__title Ваш заказ №12456 от 13.07.2021 принят в работу.
+					p.order-final__title-table Состав заказа:
+					.order-table 
+						p
+							span Электромясорубка «Ротор Дива-М»
+							span 1 шт.
+						p
+							span Электромясорубка «Ротор-Макси»
+							span 5 шт.
+						p
+							span Электромясорубка «Ротор-Экстра-М»
+							span 1 шт.
+						p
+							span Мясорубка с ручным приводом «Дива-МРП»
+							span 8 шт.
+						p
+							span ИТОГО:
+							span 20 980 руб.
+					p Наш менеджер обязательно вам перезвонит.
+					p.order-final__thanks Спасибо, что выбрали нашу продукцию!
+					a.button-b(href="#") Вернуться на главную
+	include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")
